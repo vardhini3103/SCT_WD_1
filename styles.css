@@ -1,0 +1,195 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-travel-around-the-world-travel-poster-template-picture-image_1017255.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    padding: 10px 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f9f9f9;
+}
+
+/* Content styles */
+.content {
+    padding-top: 70px; /* height of the navbar */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+section {
+    padding: 100px 20px;
+    height: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #444;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* About section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-content img {
+    width: 50%;
+    height: auto;
+    max-width: 600px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* Contact section */
+#contact {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+#contact p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#contact a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+/* Services section */
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex: 1 1 300px;
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item img {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover the container, maintain aspect ratio */
+    margin-bottom: 15px;
+}
+
+.service-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Navbar scroll effect */
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    } else {
+        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    }
+});
